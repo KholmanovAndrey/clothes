@@ -202,7 +202,7 @@ body
   text-align: center
   &__title
     color: #303030
-    font-size: 2.25rem
+    font-size: 2rem
     font-weight: 700
     text-transform: uppercase
     letter-spacing: 0.113rem
@@ -217,7 +217,7 @@ body
     display: flex
     justify-content: center
   &__input
-    width: 70%
+    width: 55%
     padding: 1rem
     border: 0.063rem solid #c2c2c2
     color: #606060
@@ -225,15 +225,21 @@ body
     font-style: italic
     letter-spacing: 0.063rem
   &__button
-    width: 30%
+    width: 45%
     padding: 1rem 0
     text-align: center
-    border: 0.063rem solid #df7634
-    background-color: #ef8440
+    border: $border_width solid $hover_color
+    background-color: $hover_color
     color: #ffffff
     font-size: 1.25rem
     font-weight: 400
     letter-spacing: 0.063rem
+    cursor: pointer
+    transition: all .3s
+    &:hover
+      background-color: #ffffff
+      border: $border_width solid #606060
+      color: #606060
 
 .footer
   padding: 1rem 0
@@ -336,6 +342,8 @@ body
 
   .logo
     font-size: 2rem
+    &__text
+      display: none
 
   .nav
     &__mobile
@@ -370,8 +378,13 @@ body
     &__input
       width: 30%
     &__button
-      width: 10%
+      width: 15%
 
   .footer
     &__block
       width: $width_size / 4
+
+@media screen and (min-width: 1280px)
+  .logo
+    &__text
+      display: inline

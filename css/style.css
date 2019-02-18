@@ -196,7 +196,7 @@ body {
   text-align: center; }
   .subscribe__title {
     color: #303030;
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.113rem;
@@ -211,7 +211,7 @@ body {
     display: flex;
     justify-content: center; }
   .subscribe__input {
-    width: 70%;
+    width: 55%;
     padding: 1rem;
     border: 0.063rem solid #c2c2c2;
     color: #606060;
@@ -219,15 +219,21 @@ body {
     font-style: italic;
     letter-spacing: 0.063rem; }
   .subscribe__button {
-    width: 30%;
+    width: 45%;
     padding: 1rem 0;
     text-align: center;
-    border: 0.063rem solid #df7634;
-    background-color: #ef8440;
+    border: 1px solid #f68236;
+    background-color: #f68236;
     color: #ffffff;
     font-size: 1.25rem;
     font-weight: 400;
-    letter-spacing: 0.063rem; }
+    letter-spacing: 0.063rem;
+    cursor: pointer;
+    transition: all 0.3s; }
+    .subscribe__button:hover {
+      background-color: #ffffff;
+      border: 1px solid #606060;
+      color: #606060; }
 
 .footer {
   padding: 1rem 0; }
@@ -324,6 +330,8 @@ body {
 
   .logo {
     font-size: 2rem; }
+    .logo__text {
+      display: none; }
 
   .nav__mobile {
     display: none; }
@@ -356,9 +364,12 @@ body {
   .subscribe__input {
     width: 30%; }
   .subscribe__button {
-    width: 10%; }
+    width: 15%; }
 
   .footer__block {
     width: 25%; } }
+@media screen and (min-width: 1280px) {
+  .logo__text {
+    display: inline; } }
 
 /*# sourceMappingURL=style.css.map */
