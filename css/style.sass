@@ -99,7 +99,7 @@ body
     justify-content: space-between
     align-items: center
     padding: 1rem 0
-    border-bottom: 1px solid #e5e5e5
+    border-bottom: $border_width solid #e5e5e5
   &__menu
     position: absolute
     top: 100%
@@ -235,15 +235,62 @@ body
     font-weight: 400
     letter-spacing: 0.063rem
 
-footer
+.footer
   padding: 1rem 0
-.copyright
-  text-align: center
-  color: #606060
-  font-size: 1.125rem
-  font-style: italic
-  letter-spacing: 0.056rem
-  margin-bottom: 3rem
+  &__flex
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__block
+    width: $width_size
+    border-right: $border_width solid #e5e5e5
+    margin-bottom: 2rem
+    padding: 0 1rem
+  &__title
+    color: #303030
+    font-size: 1.2rem
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 0.044rem
+    margin-bottom: 1rem
+.fmenu
+  list-style-type: none
+  &__list
+    margin-bottom: 10px
+  &__link
+    color: #303030
+    font-size: 1rem
+    font-weight: 400
+    letter-spacing: 0.038rem
+    transition: color .3s
+    &:hover
+      color: $hover_color
+
+.social
+  display: flex
+  justify-content: center
+  margin-top: 2rem
+  margin-bottom: 2rem
+  &:last-of-type
+    margin-right: 0
+  &__link
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 3rem
+    height: 3rem
+    background-color: #ffffff
+    margin-left: .5rem
+    color: #606060
+    border: $border_width solid #606060
+    font-size: 1.7rem
+    font-weight: 400
+    text-decoration: none
+    transition: all 0.3s
+    &:hover
+      background-color: $hover_color
+      color: #ffffff
+      border: $border_width solid transparent
 
 @media screen and (min-width: 768px)
   .header__link
@@ -273,6 +320,10 @@ footer
       width: 40%
     &__button
       width: 20%
+
+  .footer
+    &__block
+      width: $width_size / 2
 
 @media screen and (min-width: 1024px)
   .header
@@ -320,3 +371,7 @@ footer
       width: 30%
     &__button
       width: 10%
+
+  .footer
+    &__block
+      width: $width_size / 4
